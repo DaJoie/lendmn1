@@ -1,0 +1,12 @@
+@mixin container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@mixin icon{
+    width: 100px;
+    height: 100px;
+}
