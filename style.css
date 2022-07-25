@@ -1,809 +1,3546 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #fff;
-}
-
-#top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  background-color: #293c43;
-  color: #fff;
-  height: 60px;
-  width: 60px;
-  text-align: center;
-  padding-top: 10px;
-  align-items: center;
-  border-radius: 50px;
-  font-size: 25px;
-  transition: 2s;
-}
-
-.messenger {
-  position: fixed;
-  z-index: 10000000;
-  bottom: 0;
-  left: 0;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  display: none;
-}
-.messenger img {
-  width: 200px;
-}
-
-.zuun-fixed {
-  position: fixed;
-  list-style: none;
-  border: 2px solid #f2f2f2;
-  left: 0;
-  top: 50%;
-  z-index: 9999;
-  background-color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  display: none;
-  box-shadow: 2px 6px 7px -2px rgba(0, 0, 0, 0.21);
-}
-.zuun-fixed li {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-  color: #5F717D;
-  width: 42px;
-  height: 42px;
-  text-align: center;
-}
-.zuun-fixed li i {
-  font-size: 24px;
-  color: #293C43;
-}
-.zuun-fixed li:hover i {
-  color: #ff6600;
-}
-
-.deeshee i {
-  font-size: 20px;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-header {
-  padding-left: 70px;
-  padding-right: 70px;
-  display: flex;
-  height: 57px;
-  align-items: center;
-  background-color: #fff;
-  position: fixed;
-  width: 100%;
-  border-bottom: 1px solid #cfd4d8;
-  z-index: 99;
-}
-header .logo {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  float: left;
-}
-header .logo img {
-  padding: 16px 0;
-  width: 150px;
-  height: auto;
-}
-header .menu {
-  display: flex;
-  float: right;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  justify-content: right;
-}
-header .menu .menu-item {
-  height: 100%;
-  padding-top: 17px;
-}
-header .menu .menu-item p {
-  font-size: 13px;
-  font-weight: 600;
-  color: #5F717D;
-}
-header .menu .menu-item:hover {
-  border-top: 2px solid #ff6600;
-  transition: all 50ms ease-in-out;
-  content: "";
-}
-
-.moving-slide {
-  overflow: hidden;
-  width: 100%;
-  min-height: 540px;
-  position: relative;
-}
-.moving-slide .banner {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.moving-slide .banner img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50.5%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-}
-.moving-slide .banner1 {
-  -webkit-animation: slide1 12s linear infinite;
-          animation: slide1 12s linear infinite;
-}
-.moving-slide .banner2 {
-  -webkit-animation: slide2 12s linear infinite;
-          animation: slide2 12s linear infinite;
-}
-
-@-webkit-keyframes slide1 {
-  0% {
-    visibility: visible;
-  }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-
-@keyframes slide1 {
-  0% {
-    visibility: visible;
-  }
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-@-webkit-keyframes slide2 {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-@keyframes slide2 {
-  0% {
-    visibility: hidden;
-  }
-  50% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-main .install {
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-  gap: 30px;
-}
-main .install .link {
-  background-color: #000;
-  display: flex;
-  width: 250px;
-  border: 2px dimgrey;
-  border-radius: 100px;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  margin-left: 30px;
-  padding: 0.375rem 0.75rem;
-  line-height: 1.5rem;
-}
-main .install .link p {
-  color: #fff;
-}
-main .install .link img {
-  height: 20px;
-  margin-top: -7px;
-}
-main .install .link .google {
-  margin-top: -5px;
-}
-main .install .link:hover {
-  opacity: 0.7;
-  transition: 0.5s;
-}
-main hr {
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-main .big {
-  width: 100%;
-}
-main .big .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-main .big .container .small-container .header-text {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0.8px;
-  font-weight: 600;
-  color: #293c43;
-  width: 100%;
-}
-main .big .container .outer-zuraas {
-  display: flex;
-  justify-content: center;
-}
-main .big .container .outer-zuraas .zuraas {
-  background-color: #ff6600;
-  background-image: linear-gradient(302deg, #ff6600 46%, #f93702 100%);
-  height: 8px;
-  width: 200px;
-  border-radius: 50px;
-  text-align: center;
-}
-main .big .container .almost-incredible {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-main .big .container .mid-container {
-  width: 100%;
-  display: flex;
-}
-main .big .container .mid-container .child {
-  text-align: center;
-  padding-top: 1rem;
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-main .big .container .mid-container .child .icon-tsag {
-  width: 100px;
-  height: 100px;
-}
-main .big .container .mid-container .child .top {
-  margin-top: 1rem;
-  font-size: 44px;
-  line-height: 56px;
-  color: #293c43;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-main .big .container .mid-container .child .middle {
-  font-size: 19px;
-  line-height: 24px;
-  color: #293c43;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-main .big .container .mid-container .child .bottom {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-  color: #5F717D;
-  margin-bottom: 1rem;
-}
-main .big .container .mid-container .child .not-top {
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #293c43;
-  margin-top: 20px;
-}
-main .big .container .fake {
-  text-align: center;
-  margin-top: 20px;
-  font-weight: 300;
-  color: #293c43;
-  letter-spacing: 0.8px;
-  font-size: 17px;
-  margin-bottom: 3rem;
-  line-height: 22px;
-}
-main .big .container .fake2 {
-  margin-bottom: 1.5rem;
-}
-main .big .container .video {
-  border-radius: 10px;
-  margin-bottom: 3rem;
-  background-image: url(./img/bichleg.jpg);
-  background-size: cover;
-}
-main .big .container .video .inner {
-  height: 300px;
-}
-main .big .container .bottom-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-main .big .container .bottom-container .details {
-  background: transparent;
-  border-radius: 50px;
-  width: 33.333%;
-  border: 2px #ff6600 solid;
-  color: #ff6600;
-  display: flex;
-  justify-content: center;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: ease-in-out 0.15s;
-  font-weight: 400;
-}
-main .big .container .bottom-container .details:hover {
-  background-color: #ff6600;
-  background-image: linear-gradient(302deg, #ff6600 46%, #f93702 100%);
-  color: #fff;
-}
-main .big .container .container3 {
-  width: 100%;
-  display: flex;
-}
-main .big .container .container3 .elder {
-  width: 33.333333%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-main .big .container .container3 .elder .child {
-  box-shadow: 0px 12px 30px -11px rgba(0, 0, 0, 0.43);
-  margin-bottom: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-main .big .container .container3 .elder .child .zurag {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-main .big .container .container3 .elder .child .zurag img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-main .big .container .container3 .elder .child .text {
-  background-color: #f2f2f2;
-  padding: 1.25rem;
-}
-main .big .container .container3 .elder .child .text .top2 {
-  display: -webkit-box;
-  max-width: 400px;
-  height: 40px;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #293c43;
-}
-main .big .container .container3 .elder .child .text .middle1 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 300;
-  color: #5F717D;
-  margin-bottom: 1rem;
-}
-main .big .container .container3 .elder .child .text .bottom2 {
-  color: #ff6600;
-  font-weight: 600;
-  text-align: left;
-  font-size: 12px;
-  margin-top: 60px;
-}
-main .big .prizes {
-  background-image: url(./img/prize.jpg);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-main .big .container-2 {
-  width: 100%;
-}
-main .big .container-2 .mid-img {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: none;
-}
-main .big .container-2 .mid-img .container .father {
-  display: flex;
-  justify-content: space-around;
-}
-main .big .container-2 .mid-img .container .father .child2 img {
-  height: 70px;
-  opacity: 0.6;
-}
-main .big .container-2 .mid-img .container .father .child2:hover img {
-  opacity: 1;
-  transition: all 1s;
-}
-main .big .container-2 .mid-img2 .container .father .child2:hover img {
-  transform: scale(1.1);
-  transition: 0.3s;
-}
-main .big .footer {
-  background-color: #f2f2f2;
-}
-main .big .footer .ending .mom .kids {
-  display: flex;
-}
-main .big .footer .ending .mom .kids .child3 {
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-main .big .footer .ending .mom .kids .child3 .header-text1 {
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #293c43;
-}
-main .big .footer .ending .mom .kids .child3 .section {
-  line-height: 5px;
-  font-size: 14px;
-  font-weight: 300;
-  color: #5F717D;
-  margin-bottom: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-main .big .footer .ending .mom .kids .child3 .section:hover {
-  color: #293c43;
-}
-main .big .footer .ending .mom .kids .child3 .urt {
-  line-height: 21px;
-}
-main .big .footer .ending .mom .kids .child4 .section {
-  cursor: default;
-  margin-bottom: 0.6rem;
-}
-main .big .footer .ending .mom .icons {
-  width: 100%;
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-main .big .footer .ending .mom .icons .inside {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-main .big .footer .ending .mom .icons .inside .icon {
-  color: #293c43;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-main .big .footer .ending .mom .icons .inside .icon i {
-  font-size: 18px;
-}
-main .big .footer .ending .mom .icons .inside .icon:hover i {
-  color: #ff6600;
-  transition: 0.5s;
-}
-main .big .footer .ending .mom .erh {
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-}
-main .big .footer .ending .mom .erh p {
-  line-height: 16px;
-  font-size: 14px;
-  color: #5F717D;
-  margin-bottom: 1rem;
-}
-
-.no-cursor {
-  cursor: default;
-}
-
-@-webkit-keyframes award {
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes award {
-  50% {
-    transform: scale(1.1);
-  }
-}
-.pt-40 {
-  padding-top: 40px;
-}
-
-.pb-40 {
-  padding-bottom: 40px;
-}
-
-.no-border {
-  border-bottom: none !important;
-}
-
-.color {
-  background-color: #f2f2f2;
-}
-
-.text-white {
-  color: #fff !important;
-}
-
-.no-opacity {
-  opacity: 1 !important;
-}
-
-@media screen and (max-width: 576px) {
-  .big .container {
-    max-width: 540px;
-  }
-  .big .container .mid-container {
-    display: inline-block !important;
-    width: 100%;
-  }
-  .big .container .mid-container .split {
-    display: inline-block !important;
-    width: 100%;
-    justify-content: center;
-  }
-  .big .container .mid-container .split .child {
-    width: 100% !important;
-  }
-}
-.split-2 {
-  display: flex;
-}
-
-.split-3 {
-  display: flex;
-}
-
-@media screen and (min-width: 576px) {
-  .big .container {
-    max-width: 540px;
-  }
-  .big .container .mid-container .split {
-    width: 50%;
+/* img{
+    object-fit: cover;
+} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+body{
+    color: white;
+    color: #6c6c6c;
+    font: normal 14px/22px Helvetica Neue,sans-serif,Arial!important;
+}
+header{
+    padding-left: 8%;
+    margin-top: 19px;
+    padding-top: 11px;
+    margin-bottom: 20px;
     display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+header .hud{
+    display: flex;
+    
+}
+header .hud .top-logo .logo img{
+    height: auto;
+    width: 119px;
+    cursor: pointer;
+}
+header .hud .item{
+    display: flex;
+    height: 45px;
+    position: relative;
     justify-content: center;
-  }
-  .big .container .mid-container .split .child {
-    width: 50%;
-  }
-  .bye-576 {
-    display: block !important;
-  }
+    align-items: center;
 }
-@media screen and (max-width: 624px) {
-  main .install {
-    display: inline-block !important;
-  }
-  main .install .link {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .big .container .neg {
-    display: inline-block !important;
-    width: 100%;
-  }
-  .big .container .neg .split {
+header .hud .item .items{
+    max-width: 100%;
     display: inline-block;
-    width: 100%;
-  }
-  .big .container .neg .split .child {
-    width: 100%;
-  }
-  .big .container .container3 {
-    display: inline-block !important;
-  }
-  .big .container .container3 .elder {
-    width: 100% !important;
-  }
-  .big .hoyr .mid-container {
-    display: inline-block !important;
-    width: 100%;
-  }
-  .big .hoyr .mid-container .split {
-    display: flex;
-    width: 100%;
-  }
-  .big .hoyr .mid-container .split .child {
-    width: 100%;
-  }
-  .big .container-2 .mid-img .container .father {
-    display: inline-block !important;
-    width: 100%;
-    vertical-align: middle;
-  }
-  .big .container-2 .mid-img .container .father .split-2 {
-    display: flex;
-    justify-content: center;
-  }
-  .big .container-2 .mid-img .container .father .split-2 .split-3 {
-    display: flex;
-  }
-  .big .footer .ending .mom .kids .child3 {
-    width: 100% !important;
-  }
+    width: 120px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
 }
-.bye-768 {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .big .container {
-    max-width: 720px;
-  }
-  .bye-768 {
-    display: block !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  .big .container {
-    max-width: 960px;
-  }
-  .big .container .mid-container {
-    display: flex !important;
-  }
-  .big .container .mid-container .split {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-  }
-  .big .container .mid-container .split .child {
-    width: 50%;
-  }
-  .big .container-2 {
-    max-width: none !important;
-    width: 100% !important;
-  }
-  .big .prizes {
-    width: 100%;
-    max-width: none !important;
-  }
-  .big .footer {
-    max-width: none !important;
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 992px) {
-  .moving-slide {
-    min-height: 200px;
-  }
-  .moving-slide .banner {
-    min-height: 200px;
-  }
-  .moving-slide .banner img {
-    min-height: 200px;
-    height: 100%;
-  }
-}
-.menu-item-1 {
-  display: none;
-}
-
-header {
-  position: relative;
-}
-header .menu-item-1 label i {
-  z-index: 10000000000000000;
-  font-size: 20px;
-}
-header .menu-item-1 .close {
-  display: none;
-}
-header .menu-item-1 .intense {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  position: absolute;
-  top: 57px;
-  left: 0;
-}
-header .menu-item-1 .intense .warcry {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  font-size: 44px;
-}
-header .menu-item-1 .intense .warcry .gurav {
-  margin-left: 13px;
-  max-height: 45px;
-  font-size: 20px;
-  padding-top: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #5F717D;
-}
-header .menu-item-1 .intense .warcry .gurav p {
-  font-weight: 400;
-}
-header .menu-item-1 #check:checked ~ label .fa-bars {
-  display: none;
-}
-header .menu-item-1 #check:checked ~ .intense {
-  display: block !important;
-}
-header .menu-item-1 #check:checked ~ label .close {
-  display: block !important;
-}
-header .menu-item-1 #check {
-  display: none;
-}
-
-@media screen and (max-width: 993px) {
-  header {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    display: flex;
-    justify-content: space-around;
-  }
-  header .menu {
+header .hud .item .items .drop{
     display: none;
-  }
-  header .menu-item-1 {
-    display: block !important;
-  }
+    position: absolute;
+    top: 35px;
 }
-@media screen and (min-width: 1200px) {
-  .big .container {
-    max-width: 1140px;
-  }
-}/*# sourceMappingURL=style.css.map */
+header .hud .item .items:hover .drop{
+    display: block;
+}
+header .hud .item .items .drop .dropper{
+    display: flex;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 5px 22px rgb(0 0 0 / 15%);
+}
+header .hud .item .items .drop ul{
+    color: black;
+    display: flex;
+}
+header .hud .item .items .drop ul li{
+    list-style: none;
+    display: flex;
+}
+header .hud .item .items .drop ul li p{
+    font-size: .08756;
+    font-weight: 550;
+    padding-left: 3px;
+    font-size: 16px;
+}
+header .hud .item .items .drop ul li::after{
+    content: "";
+    background-color: #297cf0;
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: -6px;
+    top: 20px;
+}
+header .hud .item .items .drop ul li p:hover{
+    color: #297cf0;
+    opacity: 1;
+}
+header .hud .item .items p:hover{
+    text-shadow: 1px 1px 1px hsl(0deg 0% 100% / 0%);
+}
+header .hud .item .items-1{
+    max-width: 100%;
+    width: 60px;
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+header .hud .item .items-1 svg:hover{
+    color: #297cf0;
+}
+header .hud .item .items-1 svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+header .hud .item .items  p{
+    font-weight: 700;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .hud .item .items p i{
+    font-weight: 900;
+    font-size: 12px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+.big header .hud .baruun-deed{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 26% 20% 50%;
+    grid-template-rows: 30% 20%;
+    gap: 7px;
+    margin-left: 2%;
+}
+.big header .hud .baruun-deed .child{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.big header .hud .baruun-deed .child-1{
+    margin-left: 42px;
+    justify-content: center;
+}
+.big header .hud .baruun-deed .child-3{
+    margin-left: 30px;
+    justify-content: right;
+}
+.big header .hud .baruun-deed .child-5{
+    margin-left: 16px;
+    justify-content: left;
+}
+.big header .hud .baruun-deed .child .thing{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+    height: fit-content;
+    cursor: pointer;
+}
+.big header .hud .baruun-deed .child .thing .wasaa h2{
+    font-size: 17px;
+    margin-top: 5px;
+    color: #000;
+    font-weight: 500;
+}
+.big header .hud .baruun-deed .child h1{
+    font-size: 12px!important;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    color: #000;
+    font-weight: 400;
+}
+.big header .hud .baruun-deed .child .thing .nar .money{
+    color: green;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23px;
+}
+.big header .hud .baruun-deed .child .thing span{
+    font-size: 25px;
+    line-height: 25px;
+    color: #000;
+}
+.big header .hud .baruun-deed .child .thing .nar{
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}    
+.big header .hud .baruun-deed .child .thing .nar img{
+    height: auto;
+}
+.big header .hud .item .items-1 .searcher{
+    background: #fff;
+    border: 1px solid #297cf0;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    padding: 0;
+    border-radius: 5px;
+    display: none;
+    width: 94%;
+}
+.big header .hud .item .items-1 .searcher .input .icon{
+    display: flex;
+    align-items: center;
+}
+.big header .hud .item .items-1 .searcher .input{
+    display: flex;
+}
+.big header .hud .item .items-1 .searcher .input input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    display: flex;
+    border: none;
+    padding-right: 40px;
+    font-size: 16px;
+}
+.big header .hud .item .items-1 label .close{
+    font-size: .875rem;
+    display: none;
+    cursor: pointer;
+}
+.big header .hud .item .items-1 #check:checked ~label svg{
+    display: none;
+}
+#check{
+    display: none;
+}
+.big header .mobile-search{
+    display: none;
+}
+.big header .mobile-search .wot{
+    display: flex;
+}
+.big header .hud .mobile-2{
+    display: none;
+}
+.big main .batiin-ger{
+    display: flex;
+    background: linear-gradient(90deg, #f4f4f4 7%, hsla(0,0%,100%,.220348) 17%);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.big main .batiin-ger .bataa{
+    width: 90%;
+    display: flex;
+    height: fit-content;
+}
+.big main .batiin-ger .bataa .zurag{
+    width: 50%;
+    transition: all 3s ease-out;
+    position: relative;
+    height: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.big main .batiin-ger .bataa img{
+    height: 385px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.big main .batiin-ger .bataa .zurag .zam{
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 20%;
+}
+.big main .batiin-ger .bataa .zurag .zam p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: auto;
+}   
+.big main .batiin-ger .bataa .zurag .zam .hello{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.big main .batiin-ger .bataa .zurag:hover .zam{
+    display: block;
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    transition: all 2s ease-in-out;
+}
+.big main .batiin-ger .bataa .zurag .zam .hello .noob{
+    width: 9%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .batiin-ger .bataa .zurag .zam .hello .noob svg{
+    color: #fff;
+    padding-top: 1%;
+}
+.big main .batiin-ger .bataa .zurag .zam .hello .noob svg polyline{
+    stroke: currentColor;
+}
+.big main .batiin-ger .bataa .text h2{
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px!important;
+    line-height: 20px!important;
+    color: #000;
+    cursor: pointer;
+    margin-top: 10px;
+    opacity: 0.4;
+    margin-bottom: 30px!important;
+}
+.big main .batiin-ger .bataa .text{
+    width: 50%;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+.big main .batiin-ger .bataa .text .toim{
+    width: 100%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+.big main .batiin-ger .bataa .text .toim .toimor{
+    width: 14%;
+    border-radius: 10px;
+    background-image: linear-gradient(-120deg,#e08100,#c90027);
+    background: linear-gradient(129deg,#c40097,#d6710b);
+    cursor: pointer;
+}
+.big main .batiin-ger .bataa .text .toim .toimor:hover{
+    width: 16%;
+    transition: all .2s;
+}
+.big main .batiin-ger .bataa .text .toim .toimor p{
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+}
+.big main .batiin-ger .bataa .text h1{
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    line-height: 36px;
+}
+.big main .batiin-ger .bataa .text .share{
+    gap: 5px;
+}
+.big main .batiin-ger .bataa .text .share .henbe{
+    width: 13%;
+    gap: 10px;
+    display: flex;
+    border-radius: 5px;
+    background-color: #f0efef;
+    border: 1px solid rgba(0,0, 0,0);
+    cursor: pointer;
+}
+.big main .batiin-ger .bataa .text .share .henbe i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .batiin-ger .bataa .text .share .henbe:hover i{
+    animation: test 1s;
+}
+.big header{
+    position: relative;
+}
+.big #check1:checked ~main .batiin-ger{
+    margin-top: 10%;
+}
+.big header .mobile-search .hoyr{
+    z-index: 1000000000000000000000000000000;
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 900px;
+    background-color: #fff;
+    color: #666;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+    min-width: 200px;
+}
+.big header .mobile-search .hoyr .input{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding: 20px;
+}
+.big header .mobile-search .hoyr .input input{
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 40px;
+}
+.big header .mobile-search .wot .sup .hoyr .input .haah #check2:checked ~.mobile-search{
+    display: none;
+}
+#check2{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 .out{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999999999;
+    cursor: default;
+    background-color: #fff;
+}
+.big header .mobile-search .wot .sup-2 label .haah{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~label .haah{
+    display: block;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~label img{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~.out{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~.out{
+    display: block;
+}
+.big header .mobile-search .wot .sup-2 .out .header{
+    width: 100%;
+    height: 70px;
+    background-color: #297cf0;
+    display: flex;
+}
+.meed{
+    display: flex;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.bruh{
+    color: #333;
+    font-weight: 700;
+    margin-right: 5px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+#check4{
+    display: none;
+}
+.dropp{
+    display: none;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.dropp ul{
+    padding-left: 20px;
+}
+.dropp ul li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~main{
+    display: none!important;
+}
+.out .icons{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+.end .ending{
+    display: flex;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.end{
+    padding: 20px 20px 100px;
+}
+.end .ending p{
+    color: #000;
+    font-weight:500;
+
+}
+.out .icons .icon{
+    width: 33.33333%;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.06);
+}
+.gol{
+    margin: 0 0 20px;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check4:checked ~.dropp{
+    display: block!important;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check5:checked ~.dropp1{
+    display: block!important;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check5:checked ~label img{
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+#check5{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check6:checked ~.dropp1{
+    display: block!important;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check6:checked ~label img{
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+#check6{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check7:checked ~.dropp1{
+    display: block!important;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check7:checked ~label img{
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+#check7{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 .out .gol .child2 #check4:checked ~label img{
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+.big header .mobile-search .wot .sup-2 .out .header .haah{
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 20px;
+}
+#check3{
+    display: none;
+}
+.big header .mobile-search .wot .sup-2 .out .header .haah .dotor{
+    color: #fff!important;
+    background-color: #0561c1;
+    padding: 15px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer!important;
+}
+.big header .mobile-search .wot .sup-2 .out .header .logo{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.big header .mobile-search .wot .sup-2 .out .medee{
+    display: flex;
+    padding: 15px;
+}
+
+.big header .mobile-search .wot .sup-2 .out .medee .child{
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+}
+.big header .mobile-search .wot .sup-2 .out .medee .child .bottomm{
+    display: flex;
+}
+.big header .mobile-search .wot .sup-2 .out .medee .child .bottomm img{
+    margin-right: 5px;
+}
+.big header .mobile-search .wot .sup-2 .out .medee .child{
+    padding: 10px 15px;
+    border: 1px solid rgba(0,0,0,.07);
+    border-radius: 5px;
+    margin: 2px;
+    margin-bottom: 0;
+    width: 33.33333%;
+    cursor: pointer;
+}
+.big header .mobile-search .wot .sup-2 .out .medee .child .bottomm .dollar{
+    color: #2adb00;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: end;
+    margin-right: 5px!important;
+}
+.big header .mobile-search .wot .sup-2 .out .medee .child .bottomm .day{
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~label .haah{
+    display: block!important;
+}
+.big header .mobile-search .wot .sup-2 #check3:checked ~label img{
+    display: none!important;
+}
+.big main .batiin-ger .bataa .zurag .zam .hello .p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.big header .mobile-search .wot .sup label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.big header .mobile-search .wot .sup #check1:checked ~.hoyr{
+    display: block;
+}
+#check1{
+    display: none;
+}
+.big main .big2 .container6{
+    display: none;
+}
+.big main .big2 .container7{
+    display: none;
+}
+.big main .big2 .container8{
+    display: none;
+}
+.big main .big2 .container2 .child2{
+    position: relative;
+}
+.big main .big2 .container2 .child2 .zurag{
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container2 .child2 .zurag .zam{
+    width: 100%;
+    height: 95%;
+    padding: 20%;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container2 .child2:hover .zurag .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container2 .child2 .zurag .zam .hello{
+    width: 100%;
+    height: 100%;
+}
+.big main .big2 .container2 .child2 .zurag .zam .hello .p{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.big main .big2 .container2 .child2 .zurag .zam .hello .p p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.big main .big2 .container2 .child2 .zurag .zam .hello{
+    display: flex;
+}
+.big main .big2 .container2 .child2 .zurag .zam .hello .noob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .big2 .container2 .child2 .zurg .zam .noob svg polyline{
+    stroke: currentColor;
+}
+.big main .big2 .container3 .child2{
+    position: relative;
+}
+.big main .big2 .container3 .child2 .zurag{
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container3 .child2 .zurag .zam{
+    width: 100%;
+    height: 95%;
+    padding: 20%;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container3 .child2:hover .zurag .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container3 .child2 .zurag .zam .hello{
+    width: 100%;
+    height: 100%;
+}
+.big main .big2 .container3 .child2 .zurag .zam .hello .p{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.big main .big2 .container3 .child2 .zurag .zam .hello .p p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.big main .big2 .container3 .child2 .zurag .zam .hello{
+    display: flex;
+}
+.big main .big2 .container3 .child2 .zurag .zam .hello .noob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .big2 .container3 .child2 .zurg .zam .noob svg polyline{
+    stroke: currentColor;
+}
+.big main .big2 .container4 .child2{
+    position: relative;
+}
+.big main .big2 .container4 .child2 .zurag{
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container4 .child2 .zurag .zam{
+    width: 100%;
+    height: 95%;
+    padding: 20%;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container4 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container2 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container3 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container5 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container6 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block!important;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container7 .child2 .zurag:hover .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container4 .child2 .zurag .zam .hello{
+    width: 100%;
+    height: 100%;
+}
+.big main .big2 .container4 .child2 .zurag .zam .hello .p{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.big main .big2 .container4 .child2 .zurag .zam .hello .p p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.big main .big2 .container4 .child2 .zurag .zam .hello{
+    display: flex;
+}
+.big main .big2 .container4 .child2 .zurag .zam .hello .noob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .big2 .container4 .child2 .zurg .zam .noob svg polyline{
+    stroke: currentColor;
+}
+.child-6{
+    display: flex;
+    justify-content: right;
+}
+@keyframes test {
+    50%{
+        transform: rotate(45deg) scale(1.5);
+    }
+}
+.big header .hud .item .items-1 .item-1 #check:checked ~.searcher{
+    display: block;
+}
+.big header .hud .item .items-1 #check:checked ~label .close{
+    display: block;
+}
+@media screen and (min-width: 1116px) {
+    .big{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1155px){
+    .big header .hud .baruun-deed .child{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+    }
+    .big header .hud .baruun-deed .child-1{
+        justify-content: right;
+    }
+    .big header .hud .baruun-deed .child .thing{
+        gap: 9px;
+    }
+    header .hud .item .items{
+        width: 100px;
+    }
+    header .hud .item .gogobulan{
+        width: 120px;
+    }
+    .big header .hud .baruun-deed{
+        grid-template-columns: 39% 20% 40%;
+    }
+    header .hud .item .items-1{
+        width: 35px;
+    }
+    .big main .big3 .talk .zuun .elder .child .attack{
+        width: 65%!important;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .big header .hud .baruun-deed{
+        grid-template-columns: 29% 20% 46.5%;
+    }
+    .big header .hud .baruun-deed .child-1{
+        margin-left: 25px;
+    }
+    .big header .hud .baruun-deed .child{
+        margin-left: 0;
+    }
+    header .hud .item .items-1{
+        width: 0;
+    }
+}
+@media screen and (max-width: 960px){
+    .big header .hud .item .items{
+        display: none;
+    }
+    header{
+        max-width: 950px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .big{
+        max-width: 950px;
+    }
+    .big header .hud .baruun-deed{
+        grid-template-columns: 8% 5%;
+        gap: 10px;
+        display: none;
+    }
+    .big header .hud .baruun-deed .child .thing .nar .money{
+        display: none;
+    }
+    .big header .hud .baruun-deed .child .thing span{
+        display: none;
+    }
+    .big header .hud .baruun-deed .child .thing .wasaa .sup{
+        display: none;
+    }
+    .big header .hud .baruun-deed .child-1{
+        display: none;
+    }
+    .big header .hud .baruun-deed .child-2{
+        margin-left: 27px;
+    }
+    .big header .hud .baruun-deed .child-3{
+        margin-left: 10px;
+    }
+    .big header .hud .baruun-deed .child-4{
+        justify-content: left;
+    }
+    .big header .hud .items-1{
+        display: none;
+    }
+    .big header .mobile-search{
+        display: block;
+        width: 134px;
+        height: 55px;
+        cursor: pointer;
+    }
+    
+    
+    .bataa .zurag1{
+        animation: slide1 12s linear infinite!important;
+    }
+    .bataa .zurag2{
+        animation: slide2 12s linear infinite!important;
+    }
+    .bataa .zurag3{
+        animation: slide3 12s linear infinite!important;
+    }
+    .bataa .zurag4{
+        animation: slide4 12s linear infinite!important;
+    }
+    .big header .mobile-search .sup{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .big header .mobile-search .sup-2{
+        border-left: 1px solid  rgba(0, 0, 0, .05);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big header .hud .baruun-deed .child h1{
+        font-size: 12px;
+        font-weight: 400;
+        color: #000;
+        text-align: left;
+    }
+    .big header .hud .baruun-deed .child .thing .wasaa{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+    .big header .hud .baruun-deed .child .thing .wasaa h2{
+        font-weight: 500;
+    }
+    .big header .hud .baruun-deed .child .thing .nar img{
+        justify-content: left;
+    }
+    .big header .hud .mobile-2{
+        display: block;
+    }
+    .big header .mobile-search .wot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .big header .hud .mobile-2 .dotorh{
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, .06);
+        border-radius: 5px;
+    }
+    .big header .hud .mobile-2 .dotorh .neg{
+        display: flex;
+        gap: 20px;
+    }
+    .big header .hud .mobile-2 .dotorh .neg .child h1{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .big header .hud .mobile-2 .dotorh .hoyr{
+        display: flex;
+        justify-content: space-between;
+    }
+    .big header .hud .mobile-2 .dotorh .hoyr .child-2{
+        margin-left: 21px;
+    }
+    .big header .hud .mobile-2 .dotorh .hoyr .child-4{
+        margin-left: 10px;
+    }
+    .big header .hud .mobile-2 .dotorh .hoyr .child .thing{
+        display: flex;
+        gap: 5px;
+    }
+    .big header .hud .mobile-2 .dotorh .hoyr .child .thing .wasaa h2{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .big main .story .stories .child .zurag .big-text .text h3{
+        position:absolute;
+        bottom: inherit;
+    }
+    .big header .mobile-search .wot .haih{
+        display: block;
+    }
+    .big header .mobile-search .wot .haih .hoyr input{
+        display: block;
+    }
+    .batiin-ger .bataa .text{
+        display: none;
+    }
+    .batiin-ger .bataa .zurag{
+        width: 100%!important;
+        height: 330px!important;
+        object-fit: cover;
+    }
+    .bataa{
+        display: flow-root;
+    }
+    .hi{
+        height: 330px!important;
+    }
+    .dulmaa{
+        display: none!important;
+    }
+    .batiin-ger .bataa .zurag:hover{
+        animation: none;
+    }
+    header{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .bataa{
+        width: 100%!important;
+        position: relative;
+    }
+    .padding-right-5{
+        padding-right: 0!important;
+    }
+    .batiin-ger{
+        margin-left: 0!important;
+        width: 100%;
+        display: flow-root;
+        overflow: hidden;
+        position: relative;
+    }
+    .batiin-ger .zam{
+        padding: 0!important;
+        display: none!important;
+    }
+    .bataa .zurag img{
+        animation: none!important;
+        width: 120%;
+        position: absolute;
+        transform: none!important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .batiin-ger .zam .hello{
+        padding: 10%;
+        width: 50%;
+    }
+    .text-960{
+        display: block!important;
+        z-index: 1000000;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 5%;
+    }
+    .text-960 .toim{
+        margin-bottom: 0!important;
+    }
+    .text-960 .toimor:hover{
+        padding: 8px 20px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 8%!important;
+    }
+    .henbe{
+        width: 6.5%!important;
+        background-color: rgba(33,33,33,.7)!important;
+        padding-left: 5px;
+    }
+    .henbe:hover{
+        background-color: hsla(0,0%,100%,.67)!important;
+        transition: all .4s ease-in-out;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .henbe:hover i{
+        color: #888;
+    }
+    .text{
+        width: 90%!important;
+        padding-left: 2%!important;
+    }
+    .text-960 p{
+        margin: 0!important;
+    }
+    .text-960 .toimor{
+        background-image: linear-gradient(-120deg,#e08100,#c90027)!important;
+        font-size: 11px;
+        line-height: 15px;
+        font-weight: 700;
+        width: 7%!important;
+    }
+    .text-960 h2{
+        display: none!important;
+    }
+    .highlightnews-2{
+        line-height: 22px!important;
+        font-size: 18px!important;
+        font-weight: 550!important;
+    }
+    .nine{
+        display: block!important;
+    }
+    .bye{
+        display: none!important;
+    }
+    .stories .child{
+        width: 33%;
+        max-width: none!important;
+    }
+    .story{
+        max-width: none;
+        width: 100%;
+    }
+    .labels{
+        display: none!important;
+    }
+    .section-labels{
+        display: flex!important;
+    }
+    .container{
+        display: none!important;
+    }
+    .flex{
+        display: flex;
+    }   
+    .weight-700{
+        font-weight: 700;
+    }
+    .big2{
+        display: none!important;
+    }
+    .talk{
+        display: inline-block!important;
+        padding-left: 0!important;
+    }
+    .talk .text{
+        width: 100%!important;
+    }
+    .talk .baruun{
+        width: 60%!important;
+        justify-content: center;
+        margin-left: 15%;
+        height: 400px;
+        margin-bottom: 15px;
+    }
+    .talk .zuun{
+        width: 100%!important;
+        padding-left: 0;
+    }
+    .baagii .child{
+        width: 33%!important;
+    }
+    .baagii .comic{
+        width: 50%!important;
+    }
+    .uzeh .big34{
+        display: inline-block!important;
+    }
+    .uzeh .big34 .child{
+        width: 50%!important;
+    }
+    .uzeh .big34 .child .bottom{
+        margin-top: 0!important;
+    }
+    .end-game{
+        margin-top: 40px;
+    }
+    .end-game .menu{
+        margin-left: -100px;
+        width: 70%;
+    }
+    .end-game .text{
+        width: max-content!important;
+    }
+    .end-game .text p{
+        width: max-content!important;
+    }
+    .um{
+        display: block!important;
+    }
+    .um .container2 .child2 h2{
+        color: #888;
+        font-size: 13px!important;
+        font-weight: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .so{
+        display: block!important;
+    }
+    .so .highlighti .child .zurag{
+        position: relative;
+    }
+    .tailbar4{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .highlighti{
+        display: flex;
+    }
+    .bicig-2{
+        display: none!important;
+    }
+    .highlighti{
+        width: 100%;
+    }
+    .highlighti .child{
+        width: 100%;
+    }
+    .highlighti .child .zurag{
+        position: relative;
+        height: 170px;
+        width: 100%;
+    }
+    .highlighti .child .zurag img{
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .sain3{
+        padding: 25%!important;
+        height: 170px;
+    }
+    .highlighti .child{
+        padding-left: 30px;
+        margin-top: 30px;
+        height: 33%;
+    }
+    .highlighti .child .text{
+        margin-top: 10px;
+    }
+    .tailbar4{
+        display: none;
+    }
+    .highlighti .zurag:hover .tailbar4{
+        display: block!important;
+        background: rgba(34,34,34,.5);
+    }
+    .forme .icon{
+        gap: 10px;
+    }
+    .forme .icon .share{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .forme .icon .timer{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .forme .icon .comment{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .yuen{
+        
+        margin-top: 20px;
+    }
+    .yuen .child{
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed rgba(0, 0, 0, .06);
+    }
+    .yuen .dood{
+        margin-top: 0;
+    }
+    
+    .big main .section #trend:checked ~.yuen{
+        display: block!important;
+    }
+    .yuen .text{
+        display: flex;
+    }
+    .yuen .text .icon{
+        display: flex;
+        gap: 10px;
+    }
+    .yuen .barun{
+        display: inline-block!important;
+    }
+    .yuen .text .comment{
+        display: flex;
+        object-fit: none;
+        align-items: center;
+        gap: 5px;
+    }
+    .yuen .text .comment img{
+        object-fit: none;
+    }
+    .yuen .text .share{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .yuen .text .timer{
+        display: flex;
+        gap: 5px;
+    }
+    .yuen .text .timer img{
+        object-fit: none;
+    }
+    .yuen .text:hover{
+        animation: zurag-3 11s;
+    }
+    .big main .batiin-ger{
+        margin-left: 0!important;
+    }
+    .big main .section #new:checked ~.hey{
+        display: block!important;
+    }
+    .story{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+        margin-top: 5%!important;
+    }
+    .container2{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+    .neg{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+}
+@media (max-width: 959px) and (min-width: 641px) {
+    .big main .section .container2 .child2 .text .deed h1{
+        font-weight: 550!important;
+        font-size: 17px!important;
+        margin-bottom: 10px!important;
+    }
+    .none{
+        display: block;
+    }
+}
+@keyframes zurag-3 {
+    50%{
+        scale: 1.2;
+    }
+}
+.big main .section #ontsloh:checked ~.so{
+    display: block!important
+}
+.so{
+    display: none;
+}
+.neg{
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+}
+.big main .big2 .container2 .child2 .text .deed h1{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 640px) {
+    .big main .section .container2 .child2 .text .deed h1{
+        font-weight: 400!important;
+        font-size: 15px!important;
+    }
+    .big main .section .container2 .child2 .text h2{
+        display: none!important;
+    }
+    .big main .story{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .um{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .so{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .yuen{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .talk{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .baagii{
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .uzeh{
+        padding-left: 0!important;
+        padding-right: 0!important
+    }
+    .big main .section .container2 .child2 .zurag img{
+        height: 110px!important;
+        width: 105px!important;
+    }
+    .big main .section .container2 .child2 .text{
+        padding-left: 0!important;
+    }
+    .big main .section .container2 .child2 .zurag{
+        height: max-content!important;
+        width: max-content!important;
+    }
+    .big main .big3 .talk .zuun{
+        display: inline-block!important;
+    }
+    .big main .big3 .talk .zuun .elder{
+        display: inline-block!important;
+        width: 100%;
+    }
+    .big main .big3 .talk .zuun .elder .child{
+        width: 100%;
+    }
+    .big main .big3 .talk .zuun .elder .child{
+        height: 243px;
+        max-width: 415px;
+        margin: auto;
+    }
+    .big main .big3 .talk .baruun img{
+        height: 243px;
+        width: 100%;
+    }
+    .big main .big3 .talk .baruun{
+        width: 415px!important;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .night{
+        display: none;
+    }
+    .big main .big3 .big34 .child{
+        width: 50%!important;
+    }
+    .big main .big3 .big34 .comic{
+        width: 100%!important;
+    }
+    .foryou{
+        display: inline-block!important;
+        width: 100%;
+    }
+    .big main .big3 .uzeh .big34 .child .bigtext .text p{
+        min-height: 62px;
+    }
+    .big main .big3 .uzeh .big34 .child .bigtext .text{
+        padding-left: 0!important;
+    }
+    .big main .big3 .big34 .foryou .child{
+        width: 100%!important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .tailbar{
+        padding: 90px;
+    }
+    .sain{
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        padding: 0!important;
+    }
+    .end-game{
+        display: inline-block!important;
+    }
+    .end-game .logo{
+        
+        padding-left: 50%;
+        margin-right: 0!important;
+    }
+    .end-game .menu{
+        margin-left:15%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .end-game .menu .menu-item .logo{
+        padding-left: 0!important;
+    }
+    .footer{
+        display: inline-block!important;
+    }
+    .footer .erh{
+        margin-bottom:30px;
+        margin-left: 37px;
+    }
+    .footer .icons{
+        padding-left: 38%;
+    }
+}
+.nomargin{
+    margin-bottom: 0!important;
+}
+.none{
+    display: none;
+}
+.big main .container2, .container3, .container4, .container5, .container6, .container7 .child2 .zurag .p p{
+    font-weight: 500!important;
+}
+.foryou .child img{
+    border-top-left-radius: 5px;
+}
+.tailbar{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.sain{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.foryou{
+    display: flex;
+}
+.so{
+    display: none!important;
+}
+.yuen{
+    display: none!important;
+}
+.comment img{
+    width: 15px;
+}
+@media screen and (min-width: 640px) {
+    .talk{
+        padding-right: 30px!important;
+        padding-left: 30px!important;
+    }
+    .baagii{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+    .highlighti{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+    .yuen{
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+    .big main .batiin-ger .bataa .zurag1, .zurag2, .zurag3, .zurag4 img{
+        border-radius: 0!important;
+    }
+}
+.section-labels label{
+    width: 33.333%;
+}
+.section-labels label .ontsloh, .new, .trend{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    line-height: 22px;
+    height: 34px;
+    cursor: pointer;
+    gap: 4px;
+}
+.nine{
+    display: none;
+}
+.yuen{
+    display: none!important;
+}
+.big2222{
+    display: none!important;
+}
+.big main .section  #ontsloh:checked ~.section-labels .ontsloh{
+    background-color: #0050A4;
+}
+.big23 .dood .child .text:hover .barun p{
+    opacity: 0.6;
+    transition: 0.4s;
+}
+header{
+    padding-left: 5%!important;
+}
+.big main .story{
+    padding-left: 5%!important;
+}
+.big main .big2{
+    padding-left: 5%!important;
+}
+.neg{
+    padding-left: 5%!important;
+}
+.talk{
+    padding-left: 5%!important;
+}
+.baagii{
+    padding-left: 5%!important;
+}
+.sainu{
+    padding: 100px!important;
+}
+.foryou{
+    width: 100%;
+}
+.foryou .child{
+    width: 50%!important;
+}
+.big main .baagii .big34 .child .tailbar .sain .icon{
+    display: flex;
+    align-items: center;
+}
+.big main .section  #new:checked ~.section-labels .new{
+    background-color: #0050A4;
+}
+.big main .section  #new:checked ~.um .container2{
+    display: inline-block!important;
+}
+.big main .section  #trend:checked ~.section-labels .trend{
+    background-color: #0050a4;
+}
+.big main .section #trend:checked ~.yuen .big222{
+    display: block!important;
+}
+.big main .big2 .container4 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container4 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container4 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container4 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .section .container2 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .section .container2 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .section .container2 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .section .container2 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .section .container2 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .section .container2 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .section .container2 .child2 .text{
+    margin-left: 4%;
+}
+.big main .section .container2 .child2 .text .deed{
+    width: 100%;
+}
+.big main .section .container2 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px;
+    font-weight: 700;
+}
+.um{
+    display: none;
+}
+.trending{
+    background-color: #fdfafd;
+}
+.big main .section .container2 .child2{
+    border-bottom: 1px dashed rgba(0,0,0,.08);
+    padding-bottom: 10px;
+}
+.big main .section .container2 .child2:hover h1{
+    opacity: .7;
+    transition: all .2s ease-in-out;
+}
+.big main .big2 .container2 .child2 .text .dood h2{
+    color: #888;
+    font-size: 13px!important;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.big main .section .container2{
+    display: none;
+    margin-top: 5%;
+    width: 100%!important;
+}
+.big main .section .container2 .icon{
+    display: flex;
+    width: max-content;
+    gap: 15px;
+    margin-top: 10px;
+}
+.big main .section .container2 .zam{
+    position: absolute;
+    top: 0;
+    display: none;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    transition: all 4s ease;
+}
+.big main .section .container2 .child2 .zurag{
+    position: relative;
+}
+.big main .section .container2 .child2 .zurag img{
+    height: 140px;
+}
+.big main .section .container2 .child2{
+    max-height: 140px;
+}
+.section .container2 .hello{
+    display: flex;
+    width: 100%;
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+}
+.section .container2 .noob{
+    display: flex;
+    align-items: center;
+}
+.big main .section .container2 .zurag:hover .zam{
+    display: block!important;
+    background: rgba(34,34,34,.5);
+    height: 140px;
+    transition: all 4s ease-in-out;
+}
+.big main .section .container2 .icon .time .pic{
+    display: flex!important;
+    width: max-content;
+    gap: 10px;
+}
+.big main .section .container2 .icon .time .pic img{
+    object-fit: none;
+}
+#ontsloh{
+    display: none;
+}
+#new{
+    display: none;
+}
+#trend{
+    display: none;
+}
+.section-labels{
+    display: none;
+}
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes slide2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: visible;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+.nine{
+    display: none;
+}
+.zurag2, .zurag3, .zurag4, .zurag1 img{
+    width: 100%;
+    height: 100%;
+}
+.zurag3 img {
+    width: 100%;
+    height: 100%;
+}
+.zurag4{
+    width: 100%;
+    height: 100%;
+}
+.margin-bottom-5{
+    margin-bottom: 0.9%;
+}
+.text-white{
+    color: #fff!important;
+}
+.text-960{
+    display: none;
+}
+.talk .baruun{
+    overflow: hidden;
+}
+.talk .child{
+    overflow: hidden;
+}
+.big header .mobile-search .wot .haih{
+    width: 954px;
+    position: absolute;
+    left: 0;
+    top: 55px;
+    display: none;
+}
+.big main .batiin-ger .bataa .zurag img{
+    border-radius: 10px;
+}
+.big main .batiin-ger{
+    display: inline-block;
+    max-width: 100%;
+    margin-left: 5%;
+}
+.big main .batiin-ger .dulmaa{
+    max-width: 100%;
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-evenly;
+}
+.big main .batiin-ger .dulmaa .child{
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.big main .batiin-ger .dulmaa .child .zurag{
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10%;
+}       
+.big main .batiin-ger .dulmaa .child .zurag img{
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.big main .batiin-ger .dulmaa .child .text{
+    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .batiin-ger .dulmaa .child .text p{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: all .4s ease-in-out;
+    min-height: 44px;
+    font-size: 14px;
+    line-height: 22px!important;
+    margin-bottom: 10%;
+}
+.big main .batiin-ger .dulmaa .child .text p:hover{
+    opacity: .7;
+}
+.big main .batiin-ger .dulmaa .child .icons{
+    width: 100%;
+    display: flex;
+    padding-left: 10%;
+    margin-top: 4%;
+    position: absolute;
+    bottom: 0;
+}
+.big main .batiin-ger .dulmaa .child .icons .barun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .batiin-ger .dulmaa .child .icons .barun i{
+    font-size: 13px;
+    display: flex;
+    color: #8e8e8e;
+}
+.big main .batiin-ger .dulmaa .child .icons .barun i p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #8e8e8e;
+}
+.big main .batiin-ger .dulmaa .child .icons .zuun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+}
+header .hud .item .items p:hover{
+    opacity: .7;
+}
+.big main .story{
+    display: inline-block;
+    max-width: 100%;
+    gap: 20px;
+    margin-top: 10%;
+    padding-left: 8%;
+}
+.big main .story .bicig{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2.5%;
+}
+.big main .story .bicig span{
+    font-size: 18px;
+    color: #fff;
+    background-color: #00b0f4;
+    border-radius: 3px;
+    width: max-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+.big main .story .bicig h1{
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+}
+.big main .story .stories .child{
+    max-width: 15%;
+    gap: 10px;
+}
+.big main .story .stories .child .zurag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    width: 100%;
+    height: 235px;
+}
+.big main .story .stories .child .zurag:hover img{
+    object-fit: cover;
+    animation: none;
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+@keyframes zurag {
+    100%{
+        transform:scale(1.05);
+    }
+}
+.big main .batiin-ger .bataa .zurag:hover .hi img{
+    animation: none;
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+.big main .story .stories .child .zurag .smart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .story .stories .child .zurag img{
+    object-fit:cover;
+    width: 100%;
+    height: 235px;
+    border-radius: 5px;
+    vertical-align: middle;
+    display: flex;
+    align-self: center;
+}
+.big main .story .stories{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+.big main .story .stories .child{
+    position: relative;
+    overflow: hidden;
+}
+.big main .story .stories .child .zurag .dotorh{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    line-height: 22px;
+    width: 20%;
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 30px;
+}
+.big main .story .stories .child .zurag .dotorh .author{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    line-height: 22px;
+}
+.big main .story .stories .child .zurag .big-text .text{
+    z-index: 100;
+    height: 100%;
+}
+.big main .story .stories .child .zurag .big-text .text h3{
+    font-size: 13px;
+    line-height: 17px;
+    color: #fff;
+    max-height: 37px;
+    transition: all .4s ease-in-out;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.big main .story .stories .child .zurag .big-text .uzelt i{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 900;
+    line-height: 1;
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+.big main .story .stories .child .zurag .big-text{
+    padding: 10px;
+    z-index: 500;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+.big main .big2{
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+}
+.big main .big2 .container2{
+    display: none;
+    margin-top: 5%;
+}
+.big main .big2 .container3{
+    display: none;
+    margin-top: 5%;
+}
+.big main .big2 #tab1:checked ~.container2 {
+    display: inline-block;
+}
+.big main .big2 #tab2:checked ~.container3 {
+    display: inline-block;
+}
+.big main .big2 #tab1:checked ~.labels label .child .tab1 {
+    background-color: #407ce8;
+}
+.big main .big2 .labels label .child:hover{
+    margin-top: -2px;
+}
+.big main .big2 #tab2:checked ~.labels label .child .tab2{
+    background-color: #407ce8;
+}   
+.big main .big2 .labels label .child:hover .top{
+    background-color: #407ce8;
+}
+.big main .big2 .inside #tab1:checked ~.labels label .child .tab1{
+    background-color: #407ce8;
+}
+#tab1{
+    display: none;
+}
+#tab2{
+    display: none;
+}
+#tab3{
+    display: none;
+}
+#tab4{
+    display: none;
+}
+#tab5{
+    display: none;
+}
+#tab6{
+    display: none;
+}
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+.big main .big2 .input{
+    display: flex;
+}
+.big main .big2 .container3 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container3 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container3 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container3 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container3 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .container3 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container3 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .big2 .container3 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container3 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container3 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container3 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container3 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container3 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container3 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container3 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 .container2 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container2 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container2 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container2 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container2 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .container2 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container2 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .batiin-ger .dulmaa .child .icons .barun i p{
+    margin-left: 3px;
+}
+.big main .big2 .container2 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container2 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container2 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container2 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container2 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container2 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container2 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container2 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 .calendar i{
+    border: 1px solid #000;
+}
+.big main .big2 .calendar i:hover{
+   background-color: #407ce8;
+   color: #fff;
+   cursor: pointer;
+   transition: all .2s ease-in-out;
+}
+.big main .big2 .labels label .top{
+    height: 7px;
+    border-radius: 20px;
+    background-color: #efefef;
+    transition: all .4s ease-in-out;
+}
+.big main .big2 .labels label h1{
+    font-size: 13px;
+    color: #b7b6b6;
+    padding-left: 15%;
+}
+.big main .big2 .labels label{
+    width: 15%;
+}
+.big main .big2 .labels label .child{
+    margin-left: 5%;
+    cursor: pointer;
+}
+.big main .big2 .labels label .childish{
+    margin-left: 0;
+}
+.big2{
+    margin-top: 2%;
+}
+.big main .big2 .bicig{
+    display: flex;
+}
+.big main .big2 .bicig h2{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.big main .big2 .container4 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container4 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container4 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container4 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container4 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container4 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container4 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container4 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 .container4 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container4 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container4 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container4 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container4 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .container4 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container4 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .big2 .container4{
+    display: none;
+    margin-top: 5%;
+}
+.big main .big2 .niga{
+    margin-top: 5%;
+}
+.big main .big2 #tab3:checked ~.container4 {
+    display: inline-block;
+}
+.big main .big2 #tab4:checked ~.container5{
+    display: inline-block;
+}
+.big main .big2 #tab5:checked ~.container6{
+    display: inline-block;
+}
+.big main .big2 #tab6:checked ~.container7{
+    display: inline-block;
+}
+.big main .big2 #tab3:checked ~.labels label .child .tab3 {
+    background-color: #407ce8;
+}
+.big main .big2 #tab4:checked ~.labels label .child .tab4{
+    background-color: #407ce8;
+}
+.big main .big2 #tab5:checked ~.labels label .child .tab5{
+    background-color: #407ce8;
+}
+.big main .big2 #tab6:checked ~.labels label .child .tab6{
+    background-color: #407ce8;
+}
+.big main .big2 #tab7:checked ~.labels .labels .child .tab7{
+    background-color: #407ce8;
+}
+.big main .big2 .container5 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container5 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container5 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container5 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container5 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .container5 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container5 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .big2 .container5 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container5 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container5 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container5 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container5 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container5 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container5 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container5 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 .container5{
+    margin-top: 5%;
+}
+.big main .big2 .container5 .child2{
+    position: relative;
+}
+.big main .big2 .container5 .child2 .zurag{
+    position: relative;
+}
+.big main .big2 .container5 .child2 .zurag .zam{
+    width: 100%;
+    height: 95%;
+    padding: 20%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.big main .big2 .container5 .child2 .zurag .zam .hello{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.big main .big2 .container5 .child2 .zurag .zam .hello .p{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.big main .big2 .container5 .child2 .zurag .zam .hello .p p{
+    color: #fff;
+    font-weight: 700;
+}
+.big main .big2 .container5 .child2:hover .zurag .zam{
+    opacity: 1;
+    background: rgba(34,34,34,.5);
+    display: block;
+    transition: all 2s ease-in-out;
+}
+.big main .big2 .container5 .child2 .zurag .zam .hello .noob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big main .big2 .container6 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container6 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container6 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container6 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container6 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .niga{
+    display: none;
+}
+.big main .big2 .container6 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container6 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .big2 .container6 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container6 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container6 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container6 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container6 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container6 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container6 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container6 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 .container7 .child2{
+    display: flex;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.big main .big2 .container7 .child2 .zurag{
+    height: 150px;
+    width: 210px;
+}
+.big main .big2 .container7 .child2 .zurag img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.big main .big2 .container7 .child2 .text{
+    margin-left: 4%;
+}
+.big main .big2 .container7 .child2 .text .deed{
+    width: 100%;
+}
+.big main .big2 .container7 .child2 .text .deed h1{
+    color: #000;
+    margin-bottom: 2%;
+    line-height: 26px!important;
+    font-size: 19px!important;
+    font-weight: 700;
+}
+.big main .big2 .container7 .child2 .text .dood h2{
+    color: #888;
+    font-size: 16px;
+    font-weight: normal;
+}
+.big main .big2 .container7 .child2 .text .icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 3%;
+}
+.big main .big2 .container7 .child2 .text .icon .share i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    color: #888;
+}
+.big main .big2 .container7 .child2 .text .icon .share i p{
+    margin-left: 23%;
+}
+.big main .big2 .container7 .child2 .text .icon .time .pic{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.big main .big2 .container7 .child2 .text .icon .time .pic img{
+    display: flex;
+} 
+.big main .big2 .container7 .child2 .text .icon .time .pic p{
+    display: flex;
+}
+.big main .big2 .container7 .child2 .text .icon .comment{
+    display: flex;
+    gap: 5px;
+    margin-left: 5%;
+}
+.big main .big2 .container7 .child2:hover .zurag img{
+    animation: zurag 1s;
+    object-fit: cover;
+}
+.big main .big2 #tab4:checked ~.labels label .child .tab4 {
+    background-color: #407ce8;
+}
+.big main .big2 #tab5:checked ~.labels label .child .tab5 {
+    background-color: #407ce8;
+}
+.big main .big3 .talk{
+    display: flex;
+    width: 100%;
+}
+.big main .big3 .talk .zuun{
+    width: 50%;
+    cursor: pointer;
+    padding-left: 5%;
+}
+.big main .big3 .talk .baruun{
+    width: 50%;
+}
+.big main .big3 .talk .baruun img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.big main .big3 .talk .elder{
+    display: flex;
+    gap: 15px;
+}
+.big main .big3 .talk .elder .child{
+    width: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.big main .big3 .talk .elder .child img{
+    height: 243px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.big main .big3 .talk .zuun .elder .child .text{
+    width: 100%;
+}
+.big main .big3 .talk .baruun{
+    position: relative;
+}
+.big main .big3 .talk .baruun .text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 30px;
+    background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0));
+}
+.big main .big3 .talk .baruun .text h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.big main .big3 .talk .baruun .text .bottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+.big main .big3 .talk .baruun .text .bottom h2{
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+.big main .big3 .talk .baruun .text .p{
+    width:max-content;
+    background-color: #407ce8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 5%;
+}
+.big main .big3 .talk .baruun .text .p p{
+    
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+.big main .big3 .talk .baruun .text .bottom svg line{
+    color: #fff;
+}
+.big main .big3 .talk .baruun:hover img{
+    animation: zurag 1s;
+}
+.big main .big3 .talk .baruun:hover .text .bottom svg{
+    margin-left: 5%;
+    transition: all 1s ease;
+}
+.big main .big3 .talk .zuun .elder .child .text{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    padding: 20px 20px 40px;
+    background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0));
+    bottom: 0;
+}
+.big main .big3 .talk .zuun .elder .child-1:hover .text{
+    height: 70%;
+}
+.big main .big3 .talk .zuun .elder .child:hover .text h1{
+    max-height: 100%!important;
+}
+.big main .big3 .talk .zuun .elder .child .text .p{
+    width:max-content!important;
+    background-color: #407ce8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.big main .big3 .talk .zuun .elder .child .text .p p{
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+.big main .big3 .talk .zuun .elder .child .neg{
+    width: 20%;
+}
+.big main .big3 .talk .zuun .elder .child .hoyr{
+    width: 40%;
+}
+.big main .big3 .talk .zuun .elder .child .attack{
+    width: 60%;
+}
+.big main .big3 .talk .zuun .elder .child .text h1{
+    max-height: 50px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.big main .big3 .talk .zuun .elder .child{
+    height: 243px;
+    margin-bottom: 2%;
+}
+.big main .big3 .talk .zuun .elder .child:hover .text h1{
+    max-height: 75px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+.big main .big3 .talk .zuun .elder .child .text .p p:hover{
+    opacity: .8;
+    transition: all .2s ease-in-out;
+}
+.big main .big3 .talk .baruun .text .bottom svg line{
+    stroke: #fff;
+}
+.big main .big3 .talk .baruun:hover .text .bottom svg{
+    transition: all .2s ease;
+}
+.big main .big3 .talk .zuun .elder .child:hover img{
+    animation: zurag 1s;
+}
+.big main .big3 .talk{
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding-left: 8%;
+}
+.baagii{
+    
+    padding-left: 8%;
+}
+.big main .big3 .talk .zuun{
+    padding-left: 1%;
+}
+.big main .big3 .neg{
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+}
+.big main .big3 .neg p{
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40%;
+    margin-top: 5%;
+}
+.big main .big3 .neg p:hover{
+    color: #044f9c;
+    transition: all .4s ease-in-out;
+}
+.big main .big3 .neg p{
+    margin-bottom: 0;
+}
+.big main .big3 .bagii{
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+    padding-left: 2%;
+}
+.big main .big3 .bagii:hover h1{
+    color: #044f9c;
+    transition: all .2s;
+}
+.big main .big3 .bagii h1{
+    color: #000;
+}
+.big main .big3 .bagii h2{
+    background-color: #00b0f4;
+    color: #fff;
+    border-radius: 3px;
+}
+.big main .big3 .big34{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    margin-bottom: 7%;
+}
+.big main .big3 .big34 .child{
+    width: 25%;
+    padding-left: 15px;
+}
+.big main .big3 .big34 .child .zurag{
+    width: 100%;
+    cursor: pointer;
+}
+.big main .big3 .big34 .child .zurag img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 230px;
+}
+.big{
+    max-width: 1300;
+}
+.big main .big3 .big34 .bottom{
+    display: flex;
+    justify-content: left;
+    width: 40%;
+    border-top: 1px solid rgba(0, 0, 0, .03);
+    padding-top: 5px ;
+    margin-top: 10px;
+}
+.big main .big3 .big34 .bottom i{
+    color: #c6c6c6;
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    line-height: 20px;
+    font-size: 12px;
+}
+.big main .big3 .big34 .bottom .dood{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.big main .big3 .big34 .child .bigtext{
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    
+}
+.big main .big3 .big34 .child .bigtext .text p{
+    color: #000;
+    min-height: 72px;
+    font-weight: 500;
+    font-size: 16px;
+    display: -webkit-box;
+    line-height: 24px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.tech{
+    background-color: #fff!important;
+    color: #000!important;
+}
+.big main .big3 .bagii:hover .tech{
+    color: #407ce8!important;
+    transition: all .3s ease-in-out;
+}
+.tailbar{
+    display: none;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+}
+.sain{
+    display: flex;
+    padding: 30%;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+.sain p{
+    color: #fff;
+    font-weight: 700;
+}
+.sain svg polyline{
+    stroke: white;
+}
+.sain  svg line{
+    stroke: white;
+}
+.image:hover .tailbar{
+    display: block;
+    transition: all .4s ease;
+    background: rgba(34,34,34,.5);
+}
+.zurag:hover .tailbar{
+    display: block;
+    transition: all .4s ease;
+    background: rgba(34,34,34,.5);
+}
+.tailbar2{
+    width: 100%;
+}
+.dulmaa .child{
+    margin-left: 1%;
+}
+.dulmaa .child .zurag{
+    position: relative;
+}
+.bige{
+    position: relative;
+    padding-left: 10%;
+}
+.image .zurag{
+    overflow: hidden;
+    height: 230px;
+}
+.image:hover .zurag img{
+    animation: zurag 1.3s;
+    overflow: hidden;
+}
+.big34 .child{
+    cursor: pointer;
+}
+.big34 .child .image{
+    position: relative!important;
+}
+.comic{
+    width: 50%!important;
+}
+.big main .big2 .container2 .child2 .zurag .img{
+    overflow: hidden;
+}
+.big main .big2 .container3 .child2 .zurag .img{
+    overflow: hidden;
+}
+.big main .big2 .container4 .child2 .zurag .img{
+    overflow: hidden;
+}
+.big main .big2 .niga .child2 .zurag .img{
+    overflow: hidden;
+}
+.big main .batiin-ger .dulmaa .child:hover .zurag img{
+    animation: none;
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+.sain .icon{
+    display: flex;
+    align-items: center;
+}
+.big main .batiin-ger .dulmaa .child .zurag{
+    overflow: hidden;
+}
+.big main .big3 .baagii .bagii img{
+    margin-right: 10%;
+}
+.uzeh{
+    background-color: #1a1a1a;
+}
+.noborder{
+    border: none!important;
+}
+.uzeh .big34 .child .image .zurag img{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.nobgg{
+    background-color: #1a1a1a!important;
+    color: #fff!important;
+}
+.uzeh .bottom{
+    margin-top: 5%!important;
+}
+.padding-right-5{
+    padding-right: 5%;
+}
+.big main .big3 .uzeh .big34 .child .bigtext .text p{
+    color: hsla(0,0%,100%,.8);
+}
+.big main .big3 .uzeh .bagii{
+    padding-top: 4%;
+}
+.uzeh{
+    padding-left: 2%;
+}
+.uzeh .child{
+    position: relative;
+}
+.uzeh .child .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.uzeh .child .image{
+    overflow: hidden;
+}
+.bottom .dood{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+.padding-left-5{
+    padding-left: 5%;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.end-game .logo{
+    width: fit-content;
+}
+.end-game{
+    display: flex;
+    justify-content: space-between;
+}
+.end-game .menu{
+    display: flex;
+    gap: 20px;
+}
+.end-game .menu .menu-item{
+    display: flex;
+    gap: 10px;
+    height: fit-content;
+}
+.end-game .menu .menu-item .logo{
+    display: flex;
+    align-items:center;
+}
+.end-game .menu .menu-item .text{
+    color: #000;
+    line-height: 20px;
+    font-size: 12px;
+}
+.end-game .menu .menu-item:hover .text{
+    color: #0050a4;
+    transition: all .2s ease-in-out;
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-color: rgba(0,0,0,.05);;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.footer .icons{
+    display: flex;
+}
+.text-black{
+    color: #000;
+}
+.footer .icons .icon{
+    margin-left: 10px;
+}
+.footer .icons .icon i{
+    font-size: 20px;
+    fill: currentColor;
+}
+.footer .icons .icon i:hover{
+    color: #000;
+    transition: all .2s ease-in-out;
+}
+.big2{
+    width: 100%;
+    display: flex;
+}
+.big23{
+    width: 30%;
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+.big2{
+    position: relative;
+    width: 100%!important;
+}
+.big23{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    max-width: 290px;
+}
+.big23 .child .zurag img{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.container2{
+    width: 60%!important;
+}
+.container3{
+    width: 60%!important;
+}
+.container4{
+    width: 60%!important;
+}
+.container5{
+    width: 60%!important;
+}
+.container6{
+    width: 60%!important;
+}
+.container7{
+    width: 60%!important;
+}
+.big2 .bicig{
+    width: 60%!important;
+}
+.labels{
+    width: 60%!important;
+}
+.hey{
+    display: none;
+}
+.bicig-2{
+    display: flex;
+    margin-bottom: 50px!important;
+}
+.highlightnews{
+    font-size: 20px!important;
+    line-height: 26px!important;
+}
+.big23 .child .zurag{
+    position: relative;
+}
+.margin-right-5{
+    margin-right: 5%;
+}
+.big23 .child .tailbar3{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+    height: 100%;
+    background: rgba(34,34,34,.5);
+    transition: all .4s ease-out;
+}
+.big23 .child .zurag:hover .tailbar3{
+    display: block;
+    transition: all .3s ease-out;
+
+}
+.tailbar3 .sain2{
+    width: 100%;
+    height: 100%;
+    padding: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.big23 .child .img{
+    height: 170px;
+}
+.text-white{
+    color: #fff;
+}
+.weight-700{
+    font-weight: 700;
+}
+.big23 .text{
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.big23 .icon{
+    display: flex;
+    width: max-content;
+    justify-content: space-between;
+    color: #888;
+    font-size: 12px!important;
+    margin-top: 5px;
+    gap: 10px;
+}
+.big23 .icon .share{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.big23 .icon .timer{
+    display: flex;
+    gap: 5px;
+}
+.color-light-gray{
+    color: #c6c6c6;
+}
+.big23 .child{
+    margin-top: 10%;
+}
+.big23 .coment{
+    width: 100%;
+}
+.coment .comment{
+    display: flex;
+    gap: 5px;
+}
+.margin-top-30{
+    margin-top: 30px;
+}
+.margin-top-50{
+    margin-top: 50px;
+}
+.big23 .dood{
+    background-color: #fdfaf5;
+}
+.trend{
+    line-height: 26px;
+    font-size: 20px;
+}
+.bicig-3{
+    display: flex;
+    padding: 30px ;
+    gap: 5px;
+}
+.text-red{
+    font-weight: 700;
+    color: #e00034;
+    font-size: 46px;
+    line-height: 46px;
+    padding-right: 10px;
+}
+.container2 .icon .comment{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container2 .icon .share i{
+    margin-top: 0!important;
+}
+.container2 .icon .time{
+    display: flex;
+    align-items: center;
+}
+.container2 .icon .comment img{
+    width: 15px;
+}
+.container2 .share{
+    display: flex;
+    align-items: center;
+}
+.container .share{
+    display: flex;
+    align-items: center;
+}
+.container .icon .comment img{
+    width: 15px;
+}
+.container .icon .time{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.container .icon .share i{
+    margin-top: 0!important;
+}
+.container .icon .comment{
+    display: flex;
+    align-items: center;
+}
+.big23 .dood .child{
+    display: flex;
+    margin-top: 0;
+}
+.big23 .dood .child .text{
+    display: flex;
+}
+.big23 .dood .child .text .comment img{
+    width: 15px;
+}
+.big23 .dood .icon{
+    width: max-content;
+}
+.padding-right-10{
+    padding-right: 10%;
+}
+.big23 .dood .icon{
+    gap: 5px;
+}
+.big23{
+    width: 30%;
+    height: 99%;
+    background-color: #fff;
+}
+.big23 .dood .child{
+    padding-bottom: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px dashed rgba(0,0,0,.06);
+    background-color: #fdfaf5;
+}
+.big23 .dood .child:hover .text{
+    animation: none;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.big22{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    border-left: 1px solid rgba(0,0,0,.04)!important;
+}
+.tailbar3{
+    border-radius: 5px;
+}
+.calendar{
+    background: #efefef;
+    border: none!important;
+    width: max-content;
+    height: max-content;
+}
+.calendar i{
+    border: none!important;
+    height: 27px;
+    line-height: 18px;
+    text-align: center;
+}
+@keyframes zurag-2{
+    50%{
+        transform: scaleY(1.0004);
+    }
+}
+.section .container2 .hello p{
+    font-weight: 590;
+}
+.big main .section .container2 .child2 .zurag:hover .img img{
+    transform: scale(1.15);
+    transition: 0.5s ;
+}
+.big main .section .container2 .child2 .zurag:hover .img{
+    overflow: hidden;
+}
+.big main .section .container2 .zurag:hover .zam{
+    height: 148px;
+}
+.section .container2 .hello{
+    height: 100%;
+}
+.big main .big3 .talk .zuun .elder .child-1:hover .text{
+    height: unset;
+}
+@media screen and (max-width:640px) {
+    .bye3{
+        display: none;
+    }
+    .big main .story .stories .child{
+        width: 50%!important;
+    }
+    .container{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .big main .big3 .big34{
+        gap: 15px;
+    }
+    .big main .big3 .big34 .child{
+        width: 50%!important;
+        padding-left: 0!important;
+    }
+    .big main .big3 .big34 .comic{
+        width: 100%!important;
+    }
+}
+.big main .big2 .container .child2:hover .zurag img{
+    animation: none!important;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.big main .big2 .container .child2:hover .zurag .zam{
+    display: none!important;
+}
+.big main .big2 .container .child2 .zurag:hover .zam{
+    display: block!important;
+}

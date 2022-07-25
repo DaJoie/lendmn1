@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Si карт - Голомт банк</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/ico" href="assets/img/G-logo.png">
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/splitting.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/splitting-cells.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/demo-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="loader-wrapper">
+        <div class="loader-txt">
+            <div id="loader" data-text="WELCOME...">WELCOME...</div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="rotate-img">
+        <div class="data-img" data-img="rotate.svg"></div>
+    </div>
+    <!-- mobile-menu end- -->
+    <nav class="navigation nav-down">
+        <div class="hamburger">
+            <span class='color-menu'></span>
+            <span class='color-menu'></span>
+            <span class='color-menu'></span>
+        </div>
+        <!-- Mobile-Menu -->
+        <nav class="navigation_menu">
+            <!-- fullscreen menu -->
+            <div class='sub-menu'>
+                <div>
+                    <a href="index.html" class="menu-active animate__delay-1s" data-bs-toggle="collapse">НҮҮР</a>
+                </div>
+                <div>
+                    <a href="#section1" class="animate__delay-2s" data-bs-toggle="collapse">КАРТ ИДЭВХИЖҮҮЛЭХ</a>
+                </div>
+                <div>
+                    <a href="#section2" class="animate__delay-3s" data-bs-toggle="collapse">КАРТЫН ОНЦЛОГ</a>
+                </div>
+                <div>
+                    <a href="https://www.golomtbank.com/help/tip" target="blank" class="animate__delay-4s">КАРТЫН ЭРСДЭЛЭЭС СЭРГИЙЛЭХ ЗӨВЛӨМЖ</a>
+                </div>
+                <div><a href="https://loyalty.golomtbank.com/campaign?lang=mn" target="blank" class="animate__delay-5s">ЛОЯАЛТИ ХӨТӨЛБӨР</a></div>
+            </div>
+            <div class="social-icon animate__delay-5s">
+                <span class="social-icon-text text-white">Follow Me: </span>
+                <div class="s-link">
+                    <a href="https://twitter.com/golomtbank " class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">tw</span>
+                            <span class="link-hover text-white">tw</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="s-link">
+                    <a href="https://www.instagram.com/golomtbank/?hl=en" class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">in</span>
+                            <span class="link-hover text-white">in</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="s-link">
+                    <a href="https://www.facebook.com/Golomtbank" class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">fb</span>
+                            <span class="link-hover text-white">fb</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-menu-bg img-fluid"></div>
+        </nav>
+        <div class="home-menu-text">
+            <!-- header menu -->
+            <div class="dropdown">
+                <a class="menu-active dropdown-toggle" href="index.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">НҮҮР</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#section1" role="button" id="dropdownMenuLink_1" data-bs-toggle="dropdown" aria-expanded="false">КАРТ ИДЭВХЖҮҮЛЭХ</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#section2" role="button" id="dropdownMenuLink_2" data-bs-toggle="dropdown" aria-expanded="false">КАРТЫН ОНЦЛОГ</a>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="https://www.golomtbank.com/help/tip" target="blank" id="dropdownMenuLink_3" aria-expanded="false">КАРТЫН ЭРСДЭЛЭЭС СЭРГИЙЛЭХ ЗӨВЛӨМЖ
+                </a>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="https://loyalty.golomtbank.com/campaign?lang=mn" target="blank" id="dropdownMenuLink_4" aria-expanded="false">ЛОЯАЛТИ ХӨТӨЛБӨР
+                </a>
+            </div>
+
+        </div>
+        <!-- /.home-menu-text -->
+    </nav>
+    <!-- Header Content -->
+    <header class="home-header-bg">
+        <a href="index.html" class="header-logo">
+            <img class="logo" src="assets/img/G-logo.png" alt="logo">
+        </a>
+        <div class="swiper-container slider-v3">
+            <div id="swiper-text" class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure class="img-slider data-img" data-img="assets/img/portfolio/big-img/Si-card.png">
+                    </figure>
+                    <div class="wrap-slider-content">
+                        <div class="slider-content an-el-wrap">
+                            <div class="slider-text">
+                                <p class="el-anime-2">Бүтээлч, бүтээгч залуу хүн танд зориулав.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <figure class="img-slider data-img" data-img="assets/img/portfolio/big-img/Si-credit-width.jpg">
+                    </figure>
+                    <div class="wrap-slider-content">
+                        <div class="slider-content an-el-wrap">
+                            <div class="slider-text">
+                                <ul style="list-style-type: circle; color: white;">
+                                    <li class="el-anime-2">Цоо шинэ өнгө төрх</li>
+                                    <li class="el-anime-2">Мэдээллийн өндөр нууцлал</li>
+                                    <li class="el-anime-2">Хөнгөлөлт урамшуулал</li>
+                                    <li class="el-anime-2">Гэнэтийн бэлэг</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.swiper-wrapper -->
+            <div class="swiper-scrollbar d-none"></div>
+            <!-- Add Pagination -->
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-white">
+                <img class="slider-prev-img" src="#" alt="img">
+                <div class="node-hover slider-arrow">
+                    <div class='slider-arrow-text'>Өмнөх</div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-button-white">
+                <img class="slider-next-img" src="#" alt="img">
+                <div class="node-hover slider-arrow">
+                    <div class='slider-arrow-text'>Дараах</div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="counter">
+                <div class="swiper-pagination custom-pagination">
+                </div>
+                <div class="circle-progress">
+                    <svg version="1.1" id="circle-progress" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="90px" height="90px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                        <path class="circle-path" fill="none" stroke="#ffffff" stroke-width="8" stroke-miterlimit="15" d="M100,8.5c50.503,0,91.444,40.969,91.444,91.472
+    c0,50.502-40.941,91.458-91.444,91.458c-50.503,0-91.444-40.963-91.444-91.465c0-50.368,40.722-91.364,91.038-91.465" />
+                    </svg>
+                </div>
+            </div>
+            <!-- /.counter -->
+            <div class="number-slide"></div>
+        </div>
+        <!-- /.swiper-container .slider-v3 -->
+        <!-- social links -->
+        <div class="social-icon">
+            <span class="social-icon-text text-white">Follow Me: </span>
+            <div class="s-link">
+                <a href="#" class="wrap-link">
+                    <div class="link-text">
+                        <span class="text-white">tw</span>
+                        <span class="link-hover text-white">tw</span>
+                    </div>
+                </a>
+            </div>
+            <div class="s-link">
+                <a href="#" class="wrap-link">
+                    <div class="link-text">
+                        <span class="text-white">in</span>
+                        <span class="link-hover text-white">in</span>
+                    </div>
+                </a>
+            </div>
+            <div class="s-link">
+                <a href="#" class="wrap-link">
+                    <div class="link-text">
+                        <span class="text-white">fb</span>
+                        <span class="link-hover text-white">fb</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- scroll down icon -->
+        <div id="scroll-down">
+        </div>
+    </header>
+    <!-- clear floating elements -->
+    <div class="clearfix"></div>
+    <!-- ABOUT SECTION -->
+    <section class="about-sec animation-section">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="row">
+                <div class="col-md-12 wrap-title-section">
+                    <!-- <div class="sub-title-1 animation-1" data-splitting>About Us</div> -->
+                    <h2 class="title-section animation-2" data-splitting>SEE THE FUTURE</h2>
+                    <p class="sub-title-3">Si карт нь дебит болон кредит картын сонголттой. Та өөрийн хэрэглээ, хэв маягт тохируулан сонгоно уу. </p>
+                    <div class="s-line animation-line"></div>
+                </div>
+            </div>
+            <!-- Section Content -->
+            <div class="row section-content position-relative">
+                <div class="col-md-6 col-lg-5 animation-img">
+                    <img class="img-fluid" src="assets/img/home/See.jpg" alt="img">
+                </div>
+                <div class="col-md-6 col-lg-7 section-content-text">
+                    <p class="sub-title-3">Тавигдах шаардлага:</p>
+                    <div class="see">
+                        <ul style="list-style-type: circle;">
+                            <li>2,000,000₮ цалинтай эсвэл 20,000,000₮ хадгаламжтай</li>
+                        </ul>
+                    </div>
+                    <p class="sub-title-3">Захиалга өгөх боломжууд:</p>
+                    <div class="see">
+                        <ul style="list-style-type: circle;">
+                            <li>Голомт банкны өөрт хамгийн ойр байрлах дурын салбарт хандан захиалга өгөх.</li>
+                            <li> <a href="https://cards.golomtbank.com/product/list/40" target="blank">Cards.mn</a> хаягаар орж захиалга өгөх </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.section-content-text -->
+            </div>
+            <!-- /.section-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.about-sec -->
+    <!-- STORY SECTION -->
+    <section class="story-section dark-section animation-section" id="section1">
+        <div class="data-img scroll-anim-img" data-img="assets/img/home/Sisi.jpg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 white-title">
+                    <h3 class="animation-1" data-splitting>КАРТАА ХЭРХЭН ИДЭВХЖҮҮЛЭХ ВЭ?</h3>
+                    <div class="s-line animation-line"></div>
+                    <p class="sub-title-3 white-p animation-3" data-splitting="words">Та дараах холбоос дээр дарж карт идэвхжүүлэх заавартай танилцаарай. </p>
+                </div>
+                <!-- line -->
+                <div class="col-md-2">
+                    <div class="sep-line">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <a class="story-video" href="https://www.youtube.com/watch?v=9M_OGR1hsxQ" target="blank">
+                        <a href="https://www.youtube.com/watch?v=9M_OGR1hsxQ" target="blank" />
+                        <div class="play-icon">
+                            <svg class="img-fluid circle-button" version="1.1" id="circle-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="700px" height="700px" viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+                                <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M350,7.5c189.217,0,342.606,153.337,342.606,342.553
+    S539.217,692.633,350,692.633c-189.216,0-342.606-153.35-342.606-342.566C7.394,160.913,161.682,7.551,350.813,7.5" />
+                            </svg>
+                            <svg version="1.1" id="p-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 220 220" enable-background="new 0 0 220 220" xml:space="preserve">
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" points="23.933,38.29 23.933,10.29 196.409,110 
+    23.933,209.488 23.933,38.29 " />
+                            </svg>
+                        </div>
+                        <!-- play icon -->
+                    </a>
+                    <!-- /.story-video -->
+                </div>
+                <!-- /.col-md-5 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- SERVICES SECTION -->
+    <section class="services-sec animation-section" id="section2">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="row">
+                <div class="col-md-12 wrap-title-section">
+                    <!-- <div class="sub-title-1 animation-1" data-splitting>Services</div> -->
+                    <h2 class="title-section animation-2" data-splitting>КАРТЫН ОНЦЛОГ</h2>
+                    <div class="s-line animation-line"></div>
+                    <p class="sub-title-2 animation-3" data-splitting="words">Дэлхийн хаанаас ч төлбөр тооцоо хийх боломжийг танд олгосон visa брэндийн si карт.
+                    </p>
+                </div>
+            </div>
+            <!-- Section Content -->
+            <div class="row section-content">
+                <!-- item-1 -->
+                <div class="col-md-5 offset-md-1">
+                    <div class="services-item si-2">
+                        <div class="service-number">1</div>
+                        <h3>LOYALTY хөтөлбөр</h3>
+                        <p>Si карт эзэмшигчдэд тусгайлан зориулсан LOYALTY хөтөлбөр, урамшуулалт хамрагдах боломжтой.</p>
+                    </div>
+                </div>
+                <!-- item-2 -->
+                <div class="col-md-5">
+                    <div class="services-item si-2">
+                        <div class="service-number">2</div>
+                        <h3>Даатгал ҮНЭГҮЙ </h3>
+                        <p>2 сая төгрөгийн хамгаалалттай гэнэтийн ослын даатгалд хамрагдах боломжтой.</p>
+                    </div>
+                </div>
+                <!-- item-3 -->
+                <div class="col-md-5 offset-md-1">
+                    <div class="services-item si-3">
+                        <div class="service-number">3</div>
+                        <h3>50 хоног ХҮҮГҮЙ</h3>
+                        <p>Кредит картаар хийсэн худалдан авалт 50 хүртэлх хоног хүүгүй.</p>
+                    </div>
+                </div>
+                <!-- item-4 -->
+                <div class="col-md-5">
+                    <div class="services-item si-4">
+                        <div class="service-number">4</div>
+                        <h3>Дагалдах бэлэг</h3>
+                        <p>Зөвхөн Si картад зориулагдсан онцгой дизайн бүхий түрийвчийг бэлэглэнэ.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row /.section-content -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.services-sec -->
+    <!-- WORK PROCESS SECTION -->
+    <section class="dark-section animation-section" id="section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 white-title">
+                    <h3 class="animation-2" data-splitting>Багц бүтээгдэхүүн</h3>
+                    <div class="s-line animation-line"></div>
+                    <p class="sub-title-3 white-p animation-3" data-splitting="words">Si картын хэрэглэгч танд дараах багц бүтээгдэхүүнийг санал болгож байна.</p>
+                </div>
+                <div class="col-md-2">
+                    <div class="sep-line">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <ul class="process-text sub-title-2">
+                        <li class="sub-title-3 white-p animation-3" data-splitting="words">1.<a class="hyperlink" href="https://www.egolomt.mn/" target="blank">Интернэт банк</a></li>
+                        <li class="sub-title-3 white-p animation-3" data-splitting="words">2.<a class="hyperlink" href="https://www.golomtbank.com/retail/digital-bank/smart-bank" target="blank">Смарт банк</a></li>
+                        <li class="sub-title-3 white-p animation-3" data-splitting="words">3.<a class="hyperlink" href="https://socialpay.mn/" target="blank">SocialPay</a></li>
+                        <li class="sub-title-3 white-p animation-3" data-splitting="words">4.<a class="hyperlink" href="https://loyalty.golomtbank.com/campaign?lang=mn" target="blank">Лояалти хөтөлбөр</a></li>
+                    </ul>
+
+                </div>
+                <p class="sub-title-3 white-p animation-3" data-splitting="words">Бусад бүтээгдэхүүний мэдээллийг <a class="hyperlink" href="https://www.golomtbank.com/" target="blank">www.golomtbank.com</a> хаягаас авна уу.</p>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio-sec animation-section">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="row">
+                <div class="col-md-12 wrap-title-section">
+                    <p class="sub-title-2 animation-3" data-splitting="words">Картын нөхцөл</p>
+                </div>
+            </div>
+            <!-- Section Content -->
+            <div class="row section-content">
+                <div class="wrap-grid-portfolio">
+                    <div id="grid" class="row portfolio-gutters no-gutters">
+                        <div class="item column-3">
+                            <div class="wrap-item">
+                                <a href="https://www.golomtbank.com/cards/730" target="blank">
+                                    <div class="img">
+                                        <img class="img-fluid" src="assets/img/portfolio/Si-debit.png" alt="debit-card">
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="head-text-img">Карт-дебит</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+                        <div class="item column-3">
+                            <div class="wrap-item">
+                                <a href="https://www.golomtbank.com/cards/22822" target="blank">
+                                    <div class="img">
+                                        <img class="img-fluid" src="assets/img/portfolio/Si-credit.png" alt="credit-card">
+                                    </div>
+                                    <div class="info">
+                                        <h6 class="head-text-img">Карт-Кредит</h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.item -->
+
+                    </div>
+                    <!--  /#grid -->
+                </div>
+                <!-- /.wrap-grid-portfolio -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.portfolio-sec -->
+    <!-- TESTIMONIALS SECTION -->
+    <section class="dark-section animation-section" id="section4">
+        <div class="data-img scroll-anim-img" data-img="assets/img/portfolio/big-img/future.jpg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 white-title">
+                    <h3 class="animation-2" data-splitting>Хөнгөлөлтийн сүлжээ</h3>
+                    <div class="s-line animation-line"></div>
+                    <p class="sub-title-3 white-p animation-3" data-splitting="words">Голомт банкны Лояалти хөнгөлөлтийн сүлжээг танилцуулж байна. </p>
+                </div>
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- clints section -->
+    <div class="clients">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="clients-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/cose-logo-black.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/Tom-n-Toms.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/technozone.png" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/beauty-success.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/Eon.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/eXa.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/next-black.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/shunhlai.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/gan.PNG" alt="img" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/clients/sembii.PNG" alt="img" />
+                    </div>
+
+
+                </div>
+                <!-- /.swiper-wrapper -->
+            </div>
+            <!-- /.clients-container -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.clients -->
+    <!-- footer section -->
+    <div class="footer-height"></div>
+    <!-- technical unit -->
+    <footer>
+        <div class="container">
+            <!-- display text -->
+            <div class="logo">
+                <img src="assets/img/G-logo-mn.png" alt="logo" />
+            </div>
+            <!-- <h3 class="title-logo">ГОЛОМТ БАНК</h3> -->
+            <div class="footer-cotact-info">
+                <p><span><i class="fal fa-map-marked-alt"></i>
+                </span>Голомт банкны Төв байр, Д.Сүхбаатарын талбай 5, Ш/х-22, Улаанбаатар 15160, Монгол улс</p>
+                <p><span><i class="fal fa-id-badge"></i> </span>1800-1646</p>
+                <p><span><i class="fal fa-envelope-open-text"></i></span>mail@golomtbank.com</p>
+            </div>
+            <!-- line -->
+            <div class="w-line"></div>
+            <!-- social links -->
+            <div class="social-icon">
+                <div class="s-link">
+                    <a href="https://twitter.com/golomtbank" class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">tw</span>
+                            <span class="link-hover text-white">tw</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="s-link">
+                    <a href="https://www.instagram.com/golomtbank/?hl=en" class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">in</span>
+                            <span class="link-hover text-white">in</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="s-link">
+                    <a href="https://www.facebook.com/Golomtbank" class="wrap-link">
+                        <div class="link-text">
+                            <span class="text-white">fb</span>
+                            <span class="link-hover text-white">fb</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- /.social-icon -->
+        </div>
+    </footer>
+    <!-- JS -->
+    <script src="assets/js/scripts.min.js"></script>
+</body>
+
+</html>
