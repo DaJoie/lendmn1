@@ -598,6 +598,11 @@ header{
     font-size: 55px;
   }
 }
+@media screen and (max-width:540px) {
+  .contact .big .inside .child{
+    display: inline-block!important;
+  }
+}
 .bye{
   display: none;
 }
