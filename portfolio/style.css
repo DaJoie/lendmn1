@@ -929,15 +929,3 @@ header{
   padding-left: 0!important;
   padding-top: 10px;
 }
-.contact .big .inside .child .top:hover{
-  background-color: #f0f6fc;
-  border-radius: 10px;
-  color: #18181a!important;
-  transition: 0.4s;
-}
-.contact .big .inside .child .top{
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
